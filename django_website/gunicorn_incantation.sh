@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gunicorn mysite.wsgi
+gunicorn django_website.wsgi
