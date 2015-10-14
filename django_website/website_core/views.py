@@ -4,6 +4,13 @@ from django.template import RequestContext
 
 def index(request):
     return render(request, 'website_core/index.html', {})
+
+def about(request):
+    return render(request, 'website_core/about.html', {})
+
+def contact(request):
+    return render(request, 'website_core/contact.html', {})
+
 def handler404(request):
     response = render_to_response('404.html', {},
                                   context_instance=RequestContext(request))
