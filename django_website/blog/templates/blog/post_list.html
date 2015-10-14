@@ -1,22 +1,13 @@
-<html>
+{% extends "website_core/base.html" %}
 
-<head>
- <title>Blog</title>
-</head>
-
-<body>
-  <div>
-    <h1><a href="">Blog</a></hi>
-  </div>
-
+{% block content %}
   {% for post in posts %}
-    <div>
+    <div class="post">
+      <div class="date">
+        <p>published: {{ post.published_date }}</p>
+      </div class="date">
       <h2><a href="">{{ post.title }}</a></h2>
-      <p><small><i>published: {{ post.published_date }}</small></i></p>
       <p>{{ post.text|linebreaks }}</p>
-    </div>
+    </div class="post">
   {% endfor %}
-
-</body>
-
-</html>
+{% endblock content %}
