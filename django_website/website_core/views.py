@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
+def index(request):
+    return render(request, 'website_core/index.html', {})
 def handler404(request):
     response = render_to_response('404.html', {},
                                   context_instance=RequestContext(request))
